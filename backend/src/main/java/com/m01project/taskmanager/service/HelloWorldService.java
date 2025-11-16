@@ -1,4 +1,4 @@
-package com.m01project.taskmanager.demo.service;
+package com.m01project.taskmanager.service;
 
 import org.springframework.stereotype.Service;
 
@@ -33,13 +33,6 @@ public class HelloWorldService {
         return now.format(formatter);
     }
 
-    package com.taskmanager.demo.service;
-
-    public class HelloWorldService {
-        public String sayHello() {
-            return "Hello guys!";  // <- i add this for modify text "Test Commit"
-        }
-    }
 
 
     /**
