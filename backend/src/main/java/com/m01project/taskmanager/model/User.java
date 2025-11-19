@@ -1,10 +1,12 @@
 package com.m01project.taskmanager.model;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
+
 
 @Entity
 @Table(name = "users")
@@ -13,22 +15,22 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class User {
+@ToString(exclude = "password")
+@EqualsAndHashCode(of = "id")
 
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true)
-    private String username;
-
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true, length = 255)
     private String email;
 
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @Column(nullable = false, length = 255)
+    private String password;
+
+    @CreationTimestamp
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
-
-
 }
-
-
