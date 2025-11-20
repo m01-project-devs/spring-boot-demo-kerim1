@@ -1,6 +1,5 @@
-package com.m01project.taskmanager;
+package com.m01project.taskmanager.service;
 
-import com.m01project.taskmanager.service.HelloWorldService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;

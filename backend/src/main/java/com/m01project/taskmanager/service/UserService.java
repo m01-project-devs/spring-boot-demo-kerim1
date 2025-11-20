@@ -11,4 +11,5 @@ public interface UserService {
     User updatePassword(String newPassword, Long id);
     void deleteUser(Long id);
     List<User> getAllUsers();
+
 }
