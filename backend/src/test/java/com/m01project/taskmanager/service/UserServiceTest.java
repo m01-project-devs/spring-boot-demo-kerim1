@@ -1,9 +1,8 @@
-package com.m01project.taskmanager;
+package com.m01project.taskmanager.service;
 
 
 import com.m01project.taskmanager.model.User;
 import com.m01project.taskmanager.repository.UserRepository;
-import com.m01project.taskmanager.service.UserService;
 import com.m01project.taskmanager.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.junit.jupiter.api.DisplayName;
