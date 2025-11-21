@@ -1,6 +1,5 @@
 package com.m01project.taskmanager.model;
 
-
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -25,10 +24,11 @@ public class User {
     @Column(nullable = false)
     private String email;
 
+    // 👉 Added password column
+    @Column(nullable = false)
+    private String password;
+
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
 
-
 }
-
-
