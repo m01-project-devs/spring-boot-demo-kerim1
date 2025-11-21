@@ -20,7 +20,10 @@ public class SecurityConfig {
                         .anyRequest().permitAll()
                 )
 
-                .csrf(csrf -> csrf.disable());
+                .csrf(csrf -> csrf
+                        .ignoringRequestMatchers("/api/users/**")
+                );
+
 
 
         return http.build();
